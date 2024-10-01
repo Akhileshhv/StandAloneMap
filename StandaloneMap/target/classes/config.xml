@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.springframework.org/schema/util
+            http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+            
+            
+            
+            
+            <util:map map-class="java.util.TreeMap" id="Loc">
+            <entry key="987635647" value="palakkad"></entry>
+            <entry key="787635647" value="thrissur"></entry>
+            <entry key="887635647" value="Kochi"></entry>
+            </util:map>
+            
+            <util:list list-class="java.util.LinkedList" id="state">
+            <value>dhanalakhmi</value>
+             <value>SBI</value>
+              <value>RBI</value>
+            </util:list>
+            
+           <bean id="mycustomer" class="com.ty.customer">
+           <property name="id" value="101"></property>
+            <property name="name" value="101"></property>
+             <property name="age" value="11"></property>
+             <property name="phnoloc" ref="Loc"></property>
+              <property name="banks" ref="state"></property>
+        </bean></beans>
+        
+        
+        
+        
